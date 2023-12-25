@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delicious Buffet Restaurant</title>
+    <style>
+      body {
+        background-color: #9370db;
+      }
+      .header {
+        background-color: #ff6347;
+        color: #ffffff;
+        font-family: Arial;
+        text-align: center;
+        width: 70%;
+      }
+      .veg {
+        background-color: #f4a79a;
+        text-align: center;
+      }
+      .box {
+        background-color: #f4a79a;
+        width: 40px;
+        color: black;
+        border-radius: 5px;
+      }
+      th {
+        text-align: start;
+      }
+      #submit {
+        font: bold;
+        background-color: #ffdead;
+        width: 13em;
+        height: 35px;
+        border-radius: 5px;
+        margin-right: 50px;
+        margin-top: 50px;
+      }
+      #reset {
+        font: bold;
+        background-color: #ffdead;
+        width: 13em;
+        height: 35px;
+        border-radius: 5px;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" onsubmit="billcalculation()">
+      <h2 class="header"><i>Delicious Buffet Restaurant</i></h2>
+      <table>
+        <tr>
+          <th><label for="customerName">Customer Name</label></th>
+          <td>
+            <input
+              type="text"
+              id="customerName"
+              placeholder="Enter your name" required
+            />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="contactNo">Contact No.</label></th>
+          <td>
+            <input
+              type="number"
+              id="contactNo"
+              placeholder="Enter your mobile number"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="bookingDate">Date</label></th>
+          <td><input type="date" id="bookingDate" /></td>
+        </tr>
+        <tr>
+          <th><label for="">Timings</label></th>
+          <td>
+            <input type="radio" id="session1" name="time" />1-4pm
+            <input type="radio" id="session2" name="time"/>4-7pm
+            <input type="radio" id="session3" name="time"/>7-10pm
+          </td>
+        </tr>
+        <tr>
+          <th rowspan="2"><label for="">Vegetarian</label></th>
+          <th class="veg"><label for="vegAdult">Adult</label></th>
+          <td><input type="number" id="vegAdult" min="0" max="100" class="box" /></td>
+        </tr>
+        <tr>
+          <th class="veg"><label for="vegKids">Kids(5-9 yrs)</label></th>
+          <td><input type="number" id="vegKids" min="0" class="box" /></td>
+        </tr>
+        <tr>
+          <th rowspan="2"><label for="">Non-Vegetarian</label></th>
+          <th class="veg"><label for="nonVegAdult">Adult</label></th>
+          <td><input type="number" id="nonVegAdult" min="0" class="box" /></td>
+        </tr>
+        <tr>
+          <th class="veg"><label for="nonVegKids">Kids(5-9 yrs)</label></th>
+          <td><input type="number" id="nonVegKids" min="0" class="box" /></td>
+        </tr>
+        <tr>
+          <th><label for="occasion">Occasion</label></th>
+          <td>
+            <select name="" id="occasion">
+              <option value="">select</option>
+              <option value="">Team dinner</option>
+              <option value="">Family/Reunion</option>
+              <option value="">Party</option>
+              <option value="">Birthday celebration</option>
+              <option value="">Team lunch</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="parking">Parking</label></th>
+          <td><input type="checkbox" id="parking" />Parking Required</td>
+        </tr>
+      </table>
+      <button id="submit">Submit</button>
+      <button id="reset" type="reset">Clear</button>
+      <p id="result"></p>
+    </form>
+  </body>
+  <script src="restaurant.js"></script>
+</html>
